@@ -1,3 +1,3 @@
-Essa ferramenta tem por objetivo ajudar nos calculos trabalhistas.
+# Essa ferramenta tem por objetivo ajudar nos calculos trabalhistas.
 
-Ainda em desenvolvimento.
+## Ainda em desenvolvimento.

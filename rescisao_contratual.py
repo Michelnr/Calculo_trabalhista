@@ -7,7 +7,9 @@ dias_trab = int(data_de[0:2])
 mes_trab = int(10)  # (input('Quantos meses foram trabalhados no ultimo ano? (Mês) '))
 
 total = 0
-
+def imposto_trabalhista(salario):
+    fgts = 
+    inss = 
 
 # Salario proporcional
 if dias_trab > 15:
