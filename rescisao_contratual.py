@@ -7,17 +7,15 @@ dias_trab = int(data_de[0:2])
 mes_trab = int(10)  # (input('Quantos meses foram trabalhados no ultimo ano? (Mês) '))
 
 total = 0
-def imposto_trabalhista(salario):
-    fgts = 
-    inss = 
 
-# Salario proporcional
-if dias_trab > 15:
-    print(f'\nSalario proporcioal: R${salario:.2f}')
-    total += salario
-else:
-    print(f'\nSalario proporcional: R${salario / 30 * dias_trab:.2f}')
-    total += salario / 30 * dias_trab
+def imposto_trabalhista(salario):
+    # Salario proporcional
+    if dias_trab > 15:
+        print(f'\nSalario proporcioal: R${salario:.2f}')
+        total += salario
+    else:
+        print(f'\nSalario proporcional: R${salario / 30 * dias_trab:.2f}')
+        total += salario / 30 * dias_trab
 
 # Salario aviso previo
 if 'N' in aviso_previo:

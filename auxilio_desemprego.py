@@ -1,3 +1,4 @@
+import datetime
 # Requisitor para o Auxilio desemprego:
 print('\033[33m-=\033[m' * 55)
 print(f'\033[31mRequisitor para o Auxilio desemprego:\n'
@@ -15,16 +16,38 @@ print(f'\033[31mRequisitor para o Auxilio desemprego:\n'
       f'\033[31m3ª vez:\033[m precisa ter trabalhado no mínimo 6 meses.')
 print('\033[33m-=\033[m' * 55)
 
-print('Nunca = 0\n'
-      'Uma vez = 1\n'
-      'Duas vez = 2\n')
+def quant_solicitacao(qnt_solicitacao):
+    print('''\033[33m-=\033[m' * 55)
+    \033[31mSelecione a quantidade de vezes que solicitou o auxilio desemprego:\n
+    \033[31m0\033[m - Nunca
+    \033[31m1\033[m - Uma vez
+    \033[31m2\033[m - Duas vezes''')
+
+    print('Nunca = 0\n'
+        'Uma vez = 1\n'
+        'Duas vez = 2\n')
+    
+    qnt_solicitacao = int(input('Quantas vezes solicitou o auxilio desemprego? '))
+    return qnt_solicitacao
+
+def media_salario(media_sal):
+    salario1 = float(input('Qual seu ultimo salario? R$ '))
+    salario2 = float(input('Qual seu penultimo salario? R$ '))
+    salario3 = float(input('Qual seu antepenultimo salario? R$ '))
+    media_sal = (salario1 + salario2 + salario3) / 3
+    
+    return media_sal
+
+def tempo_trabalho(tempo_trabalho):
+    data_admissao = str(input('Data de admissão (dd/mm/aaaa): ')).split('/')
+    data_demissao = str(input('Data de demissão (dd/mm/aaaa): ')).split('/')
+    
+    return tempo_trabalho
 
 # O que eu preciso - Informações fornecidas pelo usuário
 qnt_solicitacao = int(input('Quantas vezes solicitou o auxilio desemprego? '))
-salario1 = float(input('Qual seu ultimo salario? R$ '))
-salario2 = float(input('Qual seu penultimo salario? R$ '))
-salario3 = float(input('Qual seu antepenultimo salario? R$ '))
-media_salario = (salario1 + salario2 + salario3) / 3
+
+
 tempo_trabalho = int(input('Quantos meses Trabalhados? '))
 
 # o que irei passar para o Usuario.
